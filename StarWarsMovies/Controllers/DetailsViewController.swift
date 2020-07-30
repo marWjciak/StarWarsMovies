@@ -86,7 +86,7 @@ class DetailsViewController: UITableViewController {
         view.tintColor = .black
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = .systemYellow
-        header.textLabel?.font = UIFont(name: "Hoefler Text", size: 20)
+        header.textLabel?.font = UIFont(name: "Hoefler Text", size: 25)
     }
 }
 
