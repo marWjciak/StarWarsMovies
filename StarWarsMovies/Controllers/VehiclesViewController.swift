@@ -38,7 +38,7 @@ class VehiclesViewController: UITableViewController {
         tableView.backgroundColor = .black
         tableView.separatorStyle = .none
         tableView.separatorColor = .systemYellow
-        tableView.register(CharacterTableViewCell.self, forCellReuseIdentifier: "vehicleCell")
+        tableView.register(DetailsTableViewCell.self, forCellReuseIdentifier: "vehicleCell")
     }
 
     func fetchVehicles() {
@@ -72,7 +72,7 @@ class VehiclesViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "vehicleCell") as! CharacterTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "vehicleCell") as! DetailsTableViewCell
         cell.set(with: vehicles[indexPath.row])
 
         return cell

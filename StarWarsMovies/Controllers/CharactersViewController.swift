@@ -38,7 +38,7 @@ class CharactersViewController: UITableViewController {
         tableView.backgroundColor = .black
         tableView.separatorStyle = .none
         tableView.separatorColor = .systemYellow
-        tableView.register(CharacterTableViewCell.self, forCellReuseIdentifier: "characterCell")
+        tableView.register(DetailsTableViewCell.self, forCellReuseIdentifier: "characterCell")
     }
 
     func fetchCharacters() {
@@ -72,7 +72,7 @@ class CharactersViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell") as! CharacterTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell") as! DetailsTableViewCell
         cell.set(with: characters[indexPath.row])
 
         return cell

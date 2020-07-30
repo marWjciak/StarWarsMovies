@@ -1,5 +1,5 @@
 //
-//  CharacterTableViewCell.swift
+//  DetailsTableViewCell.swift
 //  StarWarsMovies
 //
 //  Created by Marcin Wójciak on 28/07/2020.
@@ -9,7 +9,7 @@ import Alamofire
 import SwiftyJSON
 import UIKit
 
-class CharacterTableViewCell: UITableViewCell {
+class DetailsTableViewCell: UITableViewCell {
     var titleLabel = UILabel()
     var text1LeftLabel = UILabel()
     var text2LeftLabel = UILabel()
@@ -148,7 +148,7 @@ class CharacterTableViewCell: UITableViewCell {
     }
 }
 
-extension CharacterTableViewCell: UITableViewDataSource {
+extension DetailsTableViewCell: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }

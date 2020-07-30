@@ -19,7 +19,7 @@
 		D32820C724CA9BBC00962902 /* StarWarsMoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32820C624CA9BBC00962902 /* StarWarsMoviesUITests.swift */; };
 		D33D936824CF2D7A002302A3 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33D936624CF2D7A002302A3 /* MoviesViewController.swift */; };
 		D33D936924CF2D7A002302A3 /* MoviesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D33D936724CF2D7A002302A3 /* MoviesViewController.xib */; };
-		D358153924D0C876000C2C4A /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358153824D0C876000C2C4A /* CharacterTableViewCell.swift */; };
+		D358153924D0C876000C2C4A /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358153824D0C876000C2C4A /* DetailsTableViewCell.swift */; };
 		D358153B24D2F225000C2C4A /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358153A24D2F225000C2C4A /* Displayable.swift */; };
 		D358153D24D2F721000C2C4A /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358153C24D2F721000C2C4A /* Vehicle.swift */; };
 		D358153F24D2F868000C2C4A /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358153E24D2F868000C2C4A /* VehiclesViewController.swift */; };
@@ -76,7 +76,7 @@
 		D32820C824CA9BBC00962902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D33D936624CF2D7A002302A3 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		D33D936724CF2D7A002302A3 /* MoviesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesViewController.xib; sourceTree = "<group>"; };
-		D358153824D0C876000C2C4A /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		D358153824D0C876000C2C4A /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
 		D358153A24D2F225000C2C4A /* Displayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displayable.swift; sourceTree = "<group>"; };
 		D358153C24D2F721000C2C4A /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		D358153E24D2F868000C2C4A /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				D381722724CC0EDD00340BF4 /* SimpleTableViewCell.swift */,
-				D358153824D0C876000C2C4A /* CharacterTableViewCell.swift */,
+				D358153824D0C876000C2C4A /* DetailsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -478,7 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D381722524CC0EA100340BF4 /* MoviesTableViewController.swift in Sources */,
-				D358153924D0C876000C2C4A /* CharacterTableViewCell.swift in Sources */,
+				D358153924D0C876000C2C4A /* DetailsTableViewCell.swift in Sources */,
 				D358153B24D2F225000C2C4A /* Displayable.swift in Sources */,
 				D381722924CC0EDD00340BF4 /* SimpleTableViewCell.swift in Sources */,
 				D3834E5A24CF83E900D625D9 /* PageViewController.swift in Sources */,
