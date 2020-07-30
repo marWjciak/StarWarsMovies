@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviesViewController" customModule="StarWarsMovies" customModuleProvider="target">
+            <connections>
+                <outlet property="director" destination="lzX-bq-cwl" id="hzR-Xr-5ts"/>
+                <outlet property="episode_id" destination="0gT-Sb-haF" id="dQx-Gr-TpS"/>
+                <outlet property="filmImage" destination="96s-iX-3oP" id="rlR-9Z-EdJ"/>
+                <outlet property="opening" destination="nex-Ec-ABo" id="5BU-TJ-29Z"/>
+                <outlet property="producer" destination="ayg-OP-MEk" id="RyP-cV-iTV"/>
+                <outlet property="releaseDate" destination="rXs-CP-sbv" id="cea-mS-UyA"/>
+                <outlet property="subtitle" destination="79k-d3-ro9" id="ub4-fi-G4T"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="96s-iX-3oP">
+                    <rect key="frame" x="20" y="10" width="167.5" height="298"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="96s-iX-3oP" secondAttribute="height" multiplier="9:16" id="S5W-gD-JO1"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Wars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd2-7H-rvw">
+                    <rect key="frame" x="207.5" y="40" width="147.5" height="26"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="25"/>
+                    <color key="textColor" systemColor="systemYellowColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A New Hope" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79k-d3-ro9" userLabel="subtitle">
+                    <rect key="frame" x="207.5" y="71" width="147.5" height="20"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                    <color key="textColor" systemColor="systemYellowColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZZ-jW-5Tf" userLabel="Episode">
+                    <rect key="frame" x="197.5" y="178" width="43" height="10"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="10"/>
+                    <color key="textColor" systemColor="systemYellowColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gT-Sb-haF" userLabel="episode">
+                    <rect key="frame" x="307" y="175.5" width="8.5" height="15"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
+                    <color key="textColor" systemColor="systemYellowColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHr-hV-zX3" userLabel="Episode">
+                    <rect key="frame" x="197.5" y="208" width="46" height="10"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="10"/>
+                    <color key="textColor" systemColor="systemYellowColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="George Lucas" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzX-bq-cwl" userLabel="episode">
+                    <rect key="frame" x="267.5" y="205.5" width="87.5" height="15"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
+                    <color key="textColor" systemColor="systemYellowColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Producer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibr-OP-YsV" userLabel="Producer">
+                    <rect key="frame" x="197.5" y="238" width="49" height="10"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="10"/>
+                    <color key="textColor" systemColor="systemYellowColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Gary Kurtz" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-OP-MEk">
+                    <rect key="frame" x="267.5" y="235.5" width="87.5" height="15"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
+                    <color key="textColor" systemColor="systemYellowColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Release:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctm-ic-Y8g" userLabel="Release">
+                    <rect key="frame" x="197.5" y="268" width="40.5" height="10"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="10"/>
+                    <color key="textColor" systemColor="systemYellowColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1977-05-25" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXs-CP-sbv">
+                    <rect key="frame" x="267.5" y="265.5" width="87.5" height="15"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
+                    <color key="textColor" systemColor="systemYellowColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="nex-Ec-ABo">
+                    <rect key="frame" x="20" y="313" width="335" height="314"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <string key="text">It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.  During the battle, Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy...."</string>
+                    <color key="textColor" systemColor="systemYellowColor"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="bd2-7H-rvw" firstAttribute="leading" secondItem="96s-iX-3oP" secondAttribute="trailing" constant="20" id="0uE-mQ-LEY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nex-Ec-ABo" secondAttribute="trailing" constant="20" id="2Ry-uC-jIR"/>
+                <constraint firstItem="ibr-OP-YsV" firstAttribute="leading" secondItem="96s-iX-3oP" secondAttribute="trailing" constant="10" id="5pN-Kp-dB2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nex-Ec-ABo" secondAttribute="bottom" constant="40" id="5tg-KB-cwQ"/>
+                <constraint firstItem="96s-iX-3oP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Eal-bm-y6l"/>
+                <constraint firstItem="Ctm-ic-Y8g" firstAttribute="top" secondItem="ibr-OP-YsV" secondAttribute="bottom" constant="20" id="F0q-Ry-K5p"/>
+                <constraint firstItem="rXs-CP-sbv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="250" id="GSx-ee-22G"/>
+                <constraint firstItem="lzX-bq-cwl" firstAttribute="centerX" secondItem="0gT-Sb-haF" secondAttribute="centerX" id="J4a-1l-IHB"/>
+                <constraint firstItem="0gT-Sb-haF" firstAttribute="centerY" secondItem="cZZ-jW-5Tf" secondAttribute="centerY" id="MQQ-IS-LqF"/>
+                <constraint firstItem="79k-d3-ro9" firstAttribute="top" secondItem="bd2-7H-rvw" secondAttribute="bottom" constant="5" id="MdV-mI-1U8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lzX-bq-cwl" secondAttribute="trailing" constant="20" id="MrV-YW-ZsM"/>
+                <constraint firstItem="79k-d3-ro9" firstAttribute="leading" secondItem="96s-iX-3oP" secondAttribute="trailing" constant="20" id="Tc6-rM-smK"/>
+                <constraint firstItem="lzX-bq-cwl" firstAttribute="centerY" secondItem="YHr-hV-zX3" secondAttribute="centerY" id="YAK-P8-Wqg"/>
+                <constraint firstItem="ayg-OP-MEk" firstAttribute="centerY" secondItem="ibr-OP-YsV" secondAttribute="centerY" id="YeP-0Q-jXm"/>
+                <constraint firstItem="nex-Ec-ABo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ZaW-C0-g0K"/>
+                <constraint firstItem="cZZ-jW-5Tf" firstAttribute="leading" secondItem="96s-iX-3oP" secondAttribute="trailing" constant="10" id="ZdP-8i-DAc"/>
+                <constraint firstItem="ayg-OP-MEk" firstAttribute="centerX" secondItem="0gT-Sb-haF" secondAttribute="centerX" id="b9h-rD-oyv"/>
+                <constraint firstItem="lzX-bq-cwl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="250" id="bhh-ik-NTk"/>
+                <constraint firstItem="bd2-7H-rvw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="dLG-3h-eTb"/>
+                <constraint firstItem="YHr-hV-zX3" firstAttribute="leading" secondItem="96s-iX-3oP" secondAttribute="trailing" constant="10" id="fYI-cp-6Kc"/>
+                <constraint firstItem="ayg-OP-MEk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="250" id="gV1-8d-td2"/>
+                <constraint firstItem="Ctm-ic-Y8g" firstAttribute="leading" secondItem="96s-iX-3oP" secondAttribute="trailing" constant="10" id="gqp-Er-T9y"/>
+                <constraint firstItem="0gT-Sb-haF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="250" id="j0p-WR-tce"/>
+                <constraint firstItem="rXs-CP-sbv" firstAttribute="centerY" secondItem="Ctm-ic-Y8g" secondAttribute="centerY" id="j7u-O5-VpY"/>
+                <constraint firstItem="YHr-hV-zX3" firstAttribute="top" secondItem="cZZ-jW-5Tf" secondAttribute="bottom" constant="20" id="kAR-Mv-T5I"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bd2-7H-rvw" secondAttribute="trailing" constant="20" id="keY-r5-flF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="79k-d3-ro9" secondAttribute="trailing" constant="20" id="l50-59-3mN"/>
+                <constraint firstAttribute="centerX" secondItem="96s-iX-3oP" secondAttribute="trailing" id="mvo-Cb-FY9"/>
+                <constraint firstItem="nex-Ec-ABo" firstAttribute="top" secondItem="96s-iX-3oP" secondAttribute="bottom" constant="5" id="n5U-Hn-jgj"/>
+                <constraint firstItem="Ctm-ic-Y8g" firstAttribute="bottom" secondItem="96s-iX-3oP" secondAttribute="bottom" constant="-30" id="njz-Jt-kMe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ayg-OP-MEk" secondAttribute="trailing" constant="20" id="npd-on-5CZ"/>
+                <constraint firstItem="ibr-OP-YsV" firstAttribute="top" secondItem="YHr-hV-zX3" secondAttribute="bottom" constant="20" id="pTN-YD-hHA"/>
+                <constraint firstItem="rXs-CP-sbv" firstAttribute="centerX" secondItem="0gT-Sb-haF" secondAttribute="centerX" id="prf-3M-dHx"/>
+                <constraint firstItem="96s-iX-3oP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="yYW-Gv-6I5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rXs-CP-sbv" secondAttribute="trailing" constant="20" id="yoN-WT-lpS"/>
+            </constraints>
+            <point key="canvasLocation" x="136.80000000000001" y="115.59220389805098"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
