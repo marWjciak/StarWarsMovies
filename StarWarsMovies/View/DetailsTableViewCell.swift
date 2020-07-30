@@ -1,5 +1,5 @@
 //
-//  CharacterTableViewCell.swift
+//  DetailsTableViewCell.swift
 //  StarWarsMovies
 //
 //  Created by Marcin Wójciak on 28/07/2020.
@@ -9,7 +9,7 @@ import Alamofire
 import SwiftyJSON
 import UIKit
 
-class CharacterTableViewCell: UITableViewCell {
+class DetailsTableViewCell: UITableViewCell {
     var titleLabel = UILabel()
     var text1LeftLabel = UILabel()
     var text2LeftLabel = UILabel()
@@ -17,7 +17,7 @@ class CharacterTableViewCell: UITableViewCell {
     var text2RightLabel = UILabel()
     var listTitleLabel = UILabel()
     var listView = UITableView()
-    var characterFilms: [String] = []
+    var items: [String] = []
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -55,33 +55,33 @@ class CharacterTableViewCell: UITableViewCell {
         fatalError("init(coder:) has never been implemented...")
     }
 
-    func set(with character: Character) {
-        titleLabel.text = character.name
-        text1LeftLabel.text = "Birth: \(character.birthYear)"
-        text2LeftLabel.text = "Gender: \(character.gender)"
-        text1RightLabel.text = "Height: \(character.height)"
-        text2RightLabel.text = "Eye: \(character.eyeColor)"
-        listTitleLabel.text = "--- Films ---"
+    func set(with character: Displayable) {
+        titleLabel.text = character.title
+        text1LeftLabel.text = "\(character.text1Left.label) \(character.text1Left.value)"
+        text2LeftLabel.text = "\(character.text2Left.label) \(character.text2Left.value)"
+        text1RightLabel.text = "\(character.text1Right.label) \(character.text1Right.value)"
+        text2RightLabel.text = "\(character.text2Right.label) \(character.text2Right.value)"
+        listTitleLabel.text = "\(character.itemListTitle)"
 
         listView.dataSource = self
         listView.register(UITableViewCell.self, forCellReuseIdentifier: "characterFilmCell")
         let fetchGroup = DispatchGroup()
         var items: [String] = []
-        character.films.forEach { url in
+        character.itemList.forEach { url in
             fetchGroup.enter()
             AF.request(url)
                 .validate()
                 .responseJSON { response in
-                    guard let filmData = response.data else { return }
-                    let filmJson = JSON(filmData)
-                    if let filmTitle = filmJson["title"].string {
-                        items.append(filmTitle)
+                    guard let data = response.data else { return }
+                    let jsonData = JSON(data)
+                    if let title = jsonData[character.itemListTitleKeyword].string {
+                        items.append(title)
                     }
                     fetchGroup.leave()
                 }
         }
         fetchGroup.notify(queue: .main) {
-            self.characterFilms = items
+            self.items = items
             self.listView.reloadData()
         }
     }
@@ -148,14 +148,14 @@ class CharacterTableViewCell: UITableViewCell {
     }
 }
 
-extension CharacterTableViewCell: UITableViewDataSource {
+extension DetailsTableViewCell: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return characterFilms.count
+        return items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "characterFilmCell")!
-        cell.textLabel?.text = characterFilms[indexPath.row]
+        cell.textLabel?.text = items[indexPath.row]
         cell.backgroundColor = .black
         if let textLabel = cell.textLabel {
             configureLabel(for: textLabel, fontName: "Papyrus", size: 15)

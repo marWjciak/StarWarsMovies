@@ -32,11 +32,15 @@ class PageViewController: UIPageViewController {
         self.delegate = self
         self.dataSource = self
 
-        let filmVC = MoviesViewController(for: film)
-        let charactersVC = CharactersViewController(for: film)
+        let filmVC = MovieMainViewController(for: film)
+        let charactersVC = DetailsViewController(for: film.characters, of: Character.self)
+        let vehiclesVC = DetailsViewController(for: film.vehicles, of: Vehicle.self)
+        let starshipsVC = DetailsViewController(for: film.starships, of: Starship.self)
 
         myControllers.append(filmVC)
-        self.myControllers.append(charactersVC)
+        myControllers.append(charactersVC)
+        myControllers.append(vehiclesVC)
+        myControllers.append(starshipsVC)
 
         guard let first = myControllers.first else { return }
         self.setViewControllers([first], direction: .forward, animated: true, completion: nil)
@@ -61,7 +65,7 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
     }
 
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return myControllers.count
+        return self.myControllers.count
     }
 
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
