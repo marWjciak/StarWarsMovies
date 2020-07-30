@@ -1,5 +1,5 @@
 //
-//  MoviesTableViewController.swift
+//  MoviesDetailsTableViewController.swift
 //  StarWarsMovies
 //
 //  Created by Marcin Wójciak on 24/07/2020.
@@ -8,13 +8,14 @@
 import Alamofire
 import UIKit
 
-class MoviesTableViewController: UITableViewController {
+class MoviesDetailsTableViewController: UITableViewController {
     var films: [Film] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = .black
         tableView.register(SimpleTableViewCell.self, forCellReuseIdentifier: K.shared.cellIdentifier)
         fetchFilms()
     }
@@ -44,7 +45,7 @@ class MoviesTableViewController: UITableViewController {
     }
 }
 
-extension MoviesTableViewController {
+extension MoviesDetailsTableViewController {
     func fetchFilms() {
         AF.request(K.shared.filmsUrl)
             .validate()

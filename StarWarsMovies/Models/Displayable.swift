@@ -8,6 +8,7 @@
 import Foundation
 
 protocol Displayable {
+    var headTitle: String { get }
     var title: String { get }
     var text1Left: (label: String, value: String) { get }
     var text2Left: (label: String, value: String) { get }

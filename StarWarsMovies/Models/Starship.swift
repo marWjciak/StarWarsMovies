@@ -1,5 +1,5 @@
 //
-//  Vehicle.swift
+//  Starship.swift
 //  StarWarsMovies
 //
 //  Created by Marcin Wójciak on 30/07/2020.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Vehicle: Decodable {
+struct Starship: Decodable {
     let name: String
     let length: String
     let maxSpeed: String
@@ -25,9 +25,9 @@ struct Vehicle: Decodable {
     }
 }
 
-extension Vehicle: Displayable {
+extension Starship: Displayable {
     var headTitle: String {
-        "Vehicles"
+        "Starships"
     }
 
     var title: String {

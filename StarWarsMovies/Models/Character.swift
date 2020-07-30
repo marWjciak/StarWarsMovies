@@ -33,6 +33,10 @@ struct Character: Decodable {
     }
 }
 extension Character: Displayable {
+    var headTitle: String {
+        "Characters"
+    }
+    
     var title: String {
         name
     }
