@@ -1,5 +1,5 @@
 //
-//  Planet.swift
+//  Vehicle.swift
 //  StarWarsMovies
 //
 //  Created by Marcin Wójciak on 30/07/2020.
