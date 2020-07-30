@@ -20,6 +20,9 @@
 		D33D936824CF2D7A002302A3 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33D936624CF2D7A002302A3 /* MoviesViewController.swift */; };
 		D33D936924CF2D7A002302A3 /* MoviesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D33D936724CF2D7A002302A3 /* MoviesViewController.xib */; };
 		D358153924D0C876000C2C4A /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358153824D0C876000C2C4A /* CharacterTableViewCell.swift */; };
+		D358153B24D2F225000C2C4A /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358153A24D2F225000C2C4A /* Displayable.swift */; };
+		D358153D24D2F721000C2C4A /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358153C24D2F721000C2C4A /* Vehicle.swift */; };
+		D358153F24D2F868000C2C4A /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358153E24D2F868000C2C4A /* VehiclesViewController.swift */; };
 		D381721A24CC00FA00340BF4 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381721924CC00FA00340BF4 /* Films.swift */; };
 		D381721C24CC019800340BF4 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381721B24CC019800340BF4 /* Film.swift */; };
 		D381721E24CC058900340BF4 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381721D24CC058900340BF4 /* K.swift */; };
@@ -74,6 +77,9 @@
 		D33D936624CF2D7A002302A3 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		D33D936724CF2D7A002302A3 /* MoviesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesViewController.xib; sourceTree = "<group>"; };
 		D358153824D0C876000C2C4A /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		D358153A24D2F225000C2C4A /* Displayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displayable.swift; sourceTree = "<group>"; };
+		D358153C24D2F721000C2C4A /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		D358153E24D2F868000C2C4A /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
 		D381721924CC00FA00340BF4 /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
 		D381721B24CC019800340BF4 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		D381721D24CC058900340BF4 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
@@ -203,6 +209,7 @@
 				D33D936624CF2D7A002302A3 /* MoviesViewController.swift */,
 				D33D936724CF2D7A002302A3 /* MoviesViewController.xib */,
 				D3834E5424CF804900D625D9 /* CharactersViewController.swift */,
+				D358153E24D2F868000C2C4A /* VehiclesViewController.swift */,
 				D3834E5824CF83E900D625D9 /* PageViewController.swift */,
 				D3834E5924CF83E900D625D9 /* PageViewController.xib */,
 			);
@@ -213,8 +220,10 @@
 			isa = PBXGroup;
 			children = (
 				D381721B24CC019800340BF4 /* Film.swift */,
+				D358153C24D2F721000C2C4A /* Vehicle.swift */,
 				D3834E5C24D01DC700D625D9 /* Character.swift */,
 				D381721924CC00FA00340BF4 /* Films.swift */,
+				D358153A24D2F225000C2C4A /* Displayable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -470,12 +479,15 @@
 			files = (
 				D381722524CC0EA100340BF4 /* MoviesTableViewController.swift in Sources */,
 				D358153924D0C876000C2C4A /* CharacterTableViewCell.swift in Sources */,
+				D358153B24D2F225000C2C4A /* Displayable.swift in Sources */,
 				D381722924CC0EDD00340BF4 /* SimpleTableViewCell.swift in Sources */,
 				D3834E5A24CF83E900D625D9 /* PageViewController.swift in Sources */,
+				D358153F24D2F868000C2C4A /* VehiclesViewController.swift in Sources */,
 				D381721E24CC058900340BF4 /* K.swift in Sources */,
 				D381721C24CC019800340BF4 /* Film.swift in Sources */,
 				D381721A24CC00FA00340BF4 /* Films.swift in Sources */,
 				D3834E5624CF804900D625D9 /* CharactersViewController.swift in Sources */,
+				D358153D24D2F721000C2C4A /* Vehicle.swift in Sources */,
 				D3834E5D24D01DC700D625D9 /* Character.swift in Sources */,
 				D32820A924CA9BBA00962902 /* ViewController.swift in Sources */,
 				D32820A524CA9BBA00962902 /* AppDelegate.swift in Sources */,

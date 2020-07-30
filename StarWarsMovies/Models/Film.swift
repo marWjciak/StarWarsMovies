@@ -16,6 +16,7 @@ struct Film: Decodable {
     let releaseDate: String
     let characters: [String]
     let planets: [String]
+    let vehicles: [String]
     let starships: [String]
 
     enum CodingKeys: String, CodingKey {
@@ -27,6 +28,7 @@ struct Film: Decodable {
         case releaseDate = "release_date"
         case characters
         case planets
+        case vehicles
         case starships
     }
 }

@@ -34,9 +34,11 @@ class PageViewController: UIPageViewController {
 
         let filmVC = MoviesViewController(for: film)
         let charactersVC = CharactersViewController(for: film)
+        let vehiclesVC = VehiclesViewController(for: film)
 
         myControllers.append(filmVC)
-        self.myControllers.append(charactersVC)
+        myControllers.append(charactersVC)
+        myControllers.append(vehiclesVC)
 
         guard let first = myControllers.first else { return }
         self.setViewControllers([first], direction: .forward, animated: true, completion: nil)
@@ -61,7 +63,7 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
     }
 
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return myControllers.count
+        return self.myControllers.count
     }
 
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
