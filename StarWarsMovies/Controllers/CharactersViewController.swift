@@ -95,6 +95,6 @@ class CharactersViewController: UITableViewController {
             return 300
         }
 
-        return 110
+        return 100
     }
 }

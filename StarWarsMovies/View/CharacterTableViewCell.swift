@@ -5,9 +5,9 @@
 //  Created by Marcin Wójciak on 28/07/2020.
 //
 
-import UIKit
 import Alamofire
 import SwiftyJSON
+import UIKit
 
 class CharacterTableViewCell: UITableViewCell {
     var titleLabel = UILabel()
@@ -67,11 +67,11 @@ class CharacterTableViewCell: UITableViewCell {
         listView.register(UITableViewCell.self, forCellReuseIdentifier: "characterFilmCell")
         let fetchGroup = DispatchGroup()
         var items: [String] = []
-        character.films.forEach { (url) in
+        character.films.forEach { url in
             fetchGroup.enter()
             AF.request(url)
                 .validate()
-                .responseJSON { (response) in
+                .responseJSON { response in
                     guard let filmData = response.data else { return }
                     let filmJson = JSON(filmData)
                     if let filmTitle = filmJson["title"].string {
@@ -144,7 +144,7 @@ class CharacterTableViewCell: UITableViewCell {
         listView.topAnchor.constraint(equalTo: listTitleLabel.bottomAnchor).isActive = true
         listView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
         listView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
-        listView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5).isActive = true
+        listView.bottomAnchor.constraint(greaterThanOrEqualTo: bottomAnchor, constant: -5).isActive = true
     }
 }
 
@@ -156,8 +156,11 @@ extension CharacterTableViewCell: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "characterFilmCell")!
         cell.textLabel?.text = characterFilms[indexPath.row]
-        cell.textLabel?.textColor = .systemYellow
         cell.backgroundColor = .black
+        if let textLabel = cell.textLabel {
+            configureLabel(for: textLabel, fontName: "Papyrus", size: 15)
+            textLabel.textAlignment = .center
+        }
 
         return cell
     }
